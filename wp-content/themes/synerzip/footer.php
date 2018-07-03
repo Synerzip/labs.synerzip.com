@@ -32,45 +32,7 @@ wp_enqueue_script( 'script', get_template_directory_uri() . '/js/clamp.min.js', 
     })
 </script>
 <section class="f-fix footer-wrapper base-theme" id="footer-wrapper">
-<?php if(is_page('contact'))
-{
-echo'
-   <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="contact-block">
-                    <div class="partner-us text-center">
-                        <h3>Partner with Synerzip to accelerate your roadmap</h3>
-<div class="contact-section">
-                        <a href="/contact/" class="btn blog-submit-btn">Contact Us</a>
-</div>
-                          <p> We don’t spam</p>
-                    </div>
-                </div>
-            </div>
-        </div>';
-}
-else
-{
-echo'
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="contact-block">
-                    <div class="partner-us text-center">
-                        <h3>Partner with Synerzip to accelerate your roadmap</h3>
-<div class="contact-section">      
-                  <a href="/contact/" class="btn blog-submit-btn">Contact Us</a>
-</div>
-                          <p> We don’t spam</p>
-                    </div>
-                </div>
-            </div>
-        </div>';
 
-
-}
-?>
 
 
 
@@ -78,46 +40,7 @@ echo'
            <div class="col-md-8 col-sm-8 col-xs-12">
       <div class="col-xs-12 col-md-8 col-sm-12 col-md-push-2"> 
                 <div class="links-block">
-                    <h4><span>Site</span> Map</h4>
-                    <div class="col-md-4 col-sm-4 col-xs-12 no-paddingL">
-                        <ul class="link-list">
-                            <li><a href="/offering"><label>Our Offerings</label></a></li>
-                            <li><a href="/technology"><label>Technologies</label></a></li>
-                            <li><a href="/practices"><label>Best Practices</label></a></li>
-                            <li><a href="/success-stories"><label>Success Stories</label></a></li>
-                            
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <ul class="link-list">
-                            <li><a href="/team"><label>Our Team</label></a>
-                                <ul class="no-display">
-                                    <li><a href="/team">Executive Team</a></li>
-                                    <li><a href="/team">Leadership Team</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="/career"><label>Careers</label></a>
-                                <ul class="no-display">
-                                    <li><a href="/career">Life at Synerzip</a></li>
-                                    <li><a href="/career">Current Openings</a></li>
-                                    <li><a href="/career">Employee Benefits</a></li>
-                                    <li><a href="/career">Our Culture</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="/values"><label>Values</label></a>
-                                <ul class="no-display">
-                                    <li><a href="/values">Life at Synerzip</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <ul class="link-list">
-                            <li><a href="/webinars"><label>Webinars</label></a></li>
-                            <li><a href="/blogs"><label>Blogs</label></a></li>
-                            <li><a href="/contact"><label>Contact Us</label></a></li>
-                        </ul>
-                    </div>
+                   
                 </div>
                 </div> 
             </div>
