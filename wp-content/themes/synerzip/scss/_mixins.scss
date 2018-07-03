@@ -1,0 +1,17 @@
+/******************* BORDER AND BORDER RADIUS *******************/
+@mixin border ($var1, $var2, $var3){
+	border-radius: $var1;
+	border:$var2 solid $var3;
+}
+/******************* END ****************************************/
+
+@mixin responsive  ($myVar...) {
+	/*@if length ($myVar) == 1 {
+		@media screen and (max-width : nth($myVar, 1)) { @content; }
+	}*/
+	@if length($myVar) == 2{
+		@media screen and (min-width : nth($myVar, 1)) and (max-width: nth($myVar, 2)) { @content; }
+	}
+}
+
+

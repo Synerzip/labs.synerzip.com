@@ -1,0 +1,65 @@
+/*
+This file will be loaded in the page edit page when Visual Composer is activated.
+From here you can style your custom shortcode visual appearance in the backend editor.
+
+Lets add icon for our new shortocde. More information can be found here:
+http://kb.wpbakery.com/index.php?title=VC_Shortcode_Icon_Class
+*/
+
+/* Add icon for the "Add element" elements selection popup */
+.wpb-layout-element-button .vc_extend_my_class { background-image: url('../img/icon.png'); }
+
+/* Add background for our shortcode in the Visual Composer backend editor */
+.wpb_bartag .wpb_element_wrapper {
+	background-image: url('../img/icon.png');
+	/* Example how you can change look of your element in VC backend editor */
+	background-color: #494441;
+}
+
+.wpb_el_type_hiddencontentorderinput {
+    display: none;
+}
+
+.contentorder .sortable li {
+    padding: 0 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.contentorder .sortable li label {
+    height: 40px;
+    line-height: 40px;
+}
+
+.contentorder .sortable li.ui-sortable-placeholder {
+    border: 1px dashed #ddd;
+    visibility: visible !important;
+}
+
+.contentorder .sortable li:hover {
+    cursor: move;
+    background-color: #f5f5f5;
+}
+
+.contentorder-header {
+    font-style: italic;
+}
+
+.column-1,
+.column-2,
+.column-3 {
+    display: inline-block;
+    margin: 0 40px 0 0;
+}
+
+.column-1 {
+    width: 40px;
+}
+
+.column-2 {
+    width: 160px;
+}
+
+.column-3 {
+    width: 140px;
+}
