@@ -18,9 +18,7 @@ $terms = get_terms(array(
     <div class="container">
            
               <div class="col-lg-4 col-lg-offset-4" >
-                <input type="search" id="container-search" value="" class="form-control"  placeholder="Search..."
-                style="margin-top: -200px; height: 50px;width: 130%;font-size: 20px;">
-                 
+                    
               </div>
            
               <div class="row push-down-6">

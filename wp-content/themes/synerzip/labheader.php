@@ -385,7 +385,7 @@ elseif ($post->post_type == 'webinar') {
                       
                     </nav>
                     <div class="navbar-header" >
-                       <a href="<?php echo $siteUrl;?>/" class="navbar-brand"><img src="<?php bloginfo('template_url'); ?>/beta_images/<?php echo $logoColor; ?>" title="Synerzip" alt="Synerzip" width="190" /></a>
+                      <a href="<?php echo $siteUrl;?>/" class="navbar-brand"><img src="<?php bloginfo('template_url'); ?>/beta_images/<?php echo $logoColor; ?>" title="Synerzip" alt="Synerzip" width="190" /></a>
                     </div>
 
 
@@ -478,7 +478,8 @@ if (has_post_thumbnail() && !is_tax() &&  !is_search() && ($post->post_type != '
              $bannertitle=ucwords($post->post_title);
             ?>
                                   
-  
+                          <div class="banner-text text-center">  <input type="search" id="container-search" value="" class="form-control"  placeholder="Search..."
+                style=" height: 50px;width: 40%;font-size: 20px;margin-left: 30%"></div>
                         </div>
                         <?php } ?>
                         <div class="clear"></div>
