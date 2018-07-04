@@ -478,8 +478,7 @@ if (has_post_thumbnail() && !is_tax() &&  !is_search() && ($post->post_type != '
              $bannertitle=ucwords($post->post_title);
             ?>
                                   
-                          <div class="banner-text text-center">  <input type="search" id="container-search" value="" class="form-control"  placeholder="Search..."
-                style=" height: 50px;width: 40%;font-size: 20px;margin-left: 30%"></div>
+            <div class="banner-text text-center">  <input type="search" id="container-search" value="" class="form-control"  placeholder="Search..."  style=" height: 50px;width: 40%;font-size: 15px;margin-left: 30%"></div>
                         </div>
                         <?php } ?>
                         <div class="clear"></div>
@@ -545,6 +544,8 @@ if (is_page('life-at-synerzip'))
     .search-query:focus + button {
         z-index: 3;   
     }
+
+
 
 
 }

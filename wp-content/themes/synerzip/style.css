@@ -6091,10 +6091,17 @@ li#career{
         width: 100% !important;
     }
 
-
-	
 .carousel-control:hover
 {
-	
-	opacity: .5!important;
+  opacity: .5!important;
+}
+
+
+@media screen and (max-width: 800px){
+    #container-search {
+        height: 50px !important;
+        width: 80% !important;
+        font-size: 15px !important;
+        margin-left: 10% !important;
+    }
 }
