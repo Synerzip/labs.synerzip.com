@@ -18,7 +18,7 @@ $terms = get_terms(array(
     <div class="container">
            
               <div class="col-lg-4 col-lg-offset-4" >
-                    
+                        
               </div>
            
               <div class="row push-down-6">
@@ -39,7 +39,7 @@ $terms = get_terms(array(
                         $clientImage = get_the_post_thumbnail_src(get_the_post_thumbnail($Allstories[$i]->ID, 'medium'));
                         $clientLink = get_permalink($Allstories[$i]->ID); 
                         $storyType = get_the_terms($Allstories[$i]->ID, 'story_type');             
-                        $st = $post->post_content;
+                        $content=wp_trim_words($post_object[0]->post_content, 60);
                        
                          if(isset($storyType) && $storyType[0]->name=='Testimonials')
                          {
@@ -62,27 +62,28 @@ $terms = get_terms(array(
                               $story_type_name=$storyType['0']->name;
                           ?>
                           <div class="item col-sm-6 col-md-4" data-groups='[444,<?php echo $story_type_id; ?>]'>
-                            <div class="story-block" id="test">
+                            <div class="story-block" >
                                   <div class="story-img" >
                                     <a>
                                     <img src="<?php echo $clientImage; ?>"> </a>
                                   </div>
                                    
                                 <div class="story-text">
-                                     <span class="storyname"> <?php echo $story_type_name; ?></span>
-
+                                     <a class="storyname" id="test1" href='#' data-group='<?php echo $story_type_id; ?>'><?php echo $story_type_name; ?></a>
+                                     
                                       <?php 
                                         if(get_field('client_name',$Allstories[$i])=='')
                                       { ?>
                                        <p>
-                                        <a><?php echo $Allstories[$i]->post_title; ?></a></p>
+                                        <a><?php echo wp_trim_words($Allstories[$i]->post_title,10); ?></a></p>
                                       <?php }
                                       else
                                        { ?>
                                         <div class="client-name">
                                             <p><a><?php echo get_field('client_name',$Allstories[$i]);?>          
                                             </a></p>
-                                        </div>
+
+                                        </div> 
                                         <div class="client-title" >
                                           <div >
                                             <p><?php echo "<li><a href='#' data-group=$term->term_id class='storymenu'>$term->name</a></li>" ?>
@@ -185,7 +186,7 @@ $terms = get_terms(array(
   }
  .storyname{
    	  display: block;
-   	  font-size: 14px;
+   	  font-size: 12px!important;
    	  letter-spacing: 1px;
       
    	  margin-bottom: 5px;
@@ -220,12 +221,10 @@ $terms = get_terms(array(
                         speed: 1000,
                         easing: 'ease-out'
                     });
-                    $("ul.success-stories-sort").find("[data-group=444]").parent('li').addClass('active');
-                     
-
-                    var groupName1 = $('.storymenu').attr('data-group');
+                    // $("ul.success-stories-sort").find("[data-group=444]").parent('li').addClass('active');
+                     var groupName1 = $('.storymenu').attr('data-group');
                     // reshuffle grid
-                    console.log(groupName1);
+
                     $storygrid.shuffle('shuffle', Number(groupName1));
                     $(".success-stories-sort li").first().css("text-decoration", "none");
 
@@ -233,6 +232,9 @@ $terms = get_terms(array(
                 }
             });  
       });
+
+      
+       
   });
    
 

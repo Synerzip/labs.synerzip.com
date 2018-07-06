@@ -2898,7 +2898,7 @@ body.blogs section#blog-banner-wrapper {
 .success-stories-sort>li{
     display:inline-block;
     padding:0 25px 0 0;
-    font-size:20px;
+    font-size:15px;
     line-height:26px
 }
 .success-stories-sort>li>a{
@@ -4668,8 +4668,8 @@ a.search{
     }
 }
 .footer-wrapper .logo-block p{
-    width:131%;
-    margin:10% 0;
+    width:100%;
+    margin:10% -8px;
     font-size:15px;
     color:rgba(255,255,255,0.7);
     opacity:0.7;
@@ -5171,7 +5171,7 @@ a.search{
 }
 @media screen and (min-width: 200px) and (max-width: 400px){
     .success-stories-sort>li{
-        font-size:14px
+        font-size:12px
     }
 }
  .card .card-details h5{
@@ -5586,7 +5586,8 @@ table.leave_box input {
 {
 .footer-wrapper .logo-block p
 {
-width:auto;
+    width:auto;
+    margin:10px 4px!important;
 }
 }
 @media screen and (max-width: 960px)

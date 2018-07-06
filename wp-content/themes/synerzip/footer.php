@@ -32,27 +32,35 @@ wp_enqueue_script( 'script', get_template_directory_uri() . '/js/clamp.min.js', 
     })
 </script>
 <section class="f-fix footer-wrapper base-theme" id="footer-wrapper">
-
-
-
-
         <div class="row push-down-6">
-           <div class="col-md-8 col-sm-8 col-xs-12">
-      <div class="col-xs-12 col-md-8 col-sm-12 col-md-push-2"> 
-                <div class="links-block">
-                   
-                </div>
-                </div> 
-            </div>
-                  <div class="col-xs-12  col-sm-3 col-md-3">
+ <div class="col-xs-12  col-sm-3 col-md-3">
+       <h4 style="margin-left: 16px;"><span>Contact</span> Us</h4>
+        <?php echo do_shortcode( '[contact-form-7 id="32277" title="Contact Us"]' ); ?>
+   </div>
+   <div class="col-xs-12  col-sm-3 col-md-3">
+        <!-- <h4><span class="add">TEXAS</span></h4> -->
+        <p class="add">4100 Spring Valley Road<br>
+                       Suite 308<br>
+                       Dallas, TX&nbsp; 75244</p>
+             <p class="add">Tel: +1.469.374.0500<br>
+              Fax: +1.469.322.0490</p>
+   </div>
+   <div class="col-xs-12  col-sm-3 col-md-3">
+       
+        <div class="socialicon">
+            <p>
+                <a href="https://www.linkedin.com/company/synerzip"><img class="alignnone size-full wp-image-27108" src="https://www.synerzip.com/wp-content/uploads/2016/11/SoMe-LinkedIn.png" alt="some-linkedin" width="57" height="57"></a><a href="https://twitter.com/Synerzip"><img class="alignnone size-full wp-image-27109" src="https://www.synerzip.com/wp-content/uploads/2016/11/SoMe-Twitter.png" alt="some-twitter" width="58" height="57"></a><a href="https://www.youtube.com/user/SynerzipWebiChannel/"><img class="alignnone size-full wp-image-27110" src="https://www.synerzip.com/wp-content/uploads/2016/11/SoMe-YouTube.png" alt="some-youtube" width="58" height="57"></a><a href="https://www.facebook.com/Synerzip/"><img class="alignnone size-full wp-image-27107" src="https://www.synerzip.com/wp-content/uploads/2016/11/SoMe-Facebook.png" alt="some-facebook" width="57" height="57"></a></p>
+
+        </div>
+    
+   </div>
+   <div class="col-xs-12  col-sm-3 col-md-3">
         <div class="logo-block">
-                    <h4><span>About</span> Us</h4>
-                    
-                    <p class="footer-desc">There’s a reason clients chose Synerzip. Not only do we help them scale their engineering capacity and accelerate their roadmap, we become their long-term partner and trusted advisor. We can rapidly scale your engineering team, decrease time to market and save at least 50 percent with on Agile software product development teams in India.</p>
-                </div>
-            </div>
+            <h4><span>About</span> Us</h4>
+            <p class="footer-desc">There’s a reason clients chose Synerzip. Not only do we help them scale their engineering capacity and accelerate their roadmap, we become their long-term partner and trusted advisor. We can rapidly scale your engineering team, decrease time to market and save at least 50 percent with on Agile software product development teams in India.</p>
         </div>
     </div>
+</div>
 
  <div class="container-fluid">
     <div class="row push-down-2">
@@ -62,17 +70,8 @@ wp_enqueue_script( 'script', get_template_directory_uri() . '/js/clamp.min.js', 
                     <div class="col-md-8">
                         <div class="col-xs-12 col-md-8 col-md-push-2">
                           <div class=" text-center">
-                              <div class="social-media">
-                              
-                              <ul>
-            <li><a href="https://www.linkedin.com/company/synerzip"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                
-                        <li><a href="https://twitter.com/Synerzip"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                <li><a href="https://www.youtube.com/user/SynerzipWebiChannel/"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-    <li><a href="https://www.facebook.com/Synerzip/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                              </ul>
-                            </div>
-                          </div>
+  
+                           </div>
                         </div>
                     </div>
                     <div class="col-md-4 col-xs-12">
@@ -133,6 +132,125 @@ wp_enqueue_script( 'script', get_template_directory_uri() . '/js/clamp.min.js', 
   
    
 }
+.add
+{
+   margin: 47px 0px 0px 25px;
+   padding: 0;
+   font-size: 1em;
+   line-height: 1.6em;
+}
+
+
+.wpcf7 input[type=text],
+.wpcf7 input[type=email],
+.wpcf7 input[type=tel],
+.wpcf7 textarea {
+ background-color: white;
+ border: none;
+ width: 100% !important;
+ -moz-border-radius: 0 !important;
+ -webkit-border-radius: 0 !important;
+ border-radius: 4px !important;
+ font-size: 14px;
+ color: #736F6F !important;
+ padding: 8px !important;
+ margin-top: 5px;
+ -moz-box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ box-sizing: border-box;
+}
+.wpcf7-form-control-wrap  textarea {
+  height:70px;       
+}
+
+.wpcf7-submit {
+    background-color: #FED427;
+    border: 0;
+    border-radius: 0 !important;
+    color: #4A4A4A;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 7px 27px;
+    margin-left: 84px;
+    margin-top:6px;
+}
+.wpcf7-submit:hover {
+    background-color: #FED427  !important;
+    color: black !important;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+/* ------------   form GROUPING ------------  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+/*  GRID OF TWO  */
+.span_2_of_2 {
+    width: 100%;
+}
+.span_1_of_2 {
+    width: 49.2%;
+}
+.span_1_of_3 {
+    width: 23.8%;
+}
+/* ------------ form SECTIONS ------------  */
+.section {
+    clear: both;
+    padding: 0px;
+    margin: 0% 0;
+}
+
+/* ------------  form COLUMN SETUP ------------  */
+.col {
+    display: block;
+    float:left;
+    margin: 0.5% 0 0.5% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+.socialicon {
+    margin: 72px 0px 0px -75px;
+}
+.socialicon a {
+    margin: 11px;
+} 
+
+.wpcf7-form-control-wrap{
+  
+  margin-left: 15px;
+}
+
+
+/* ------------ form GO FULL WIDTH AT LESS THAN 480 PIXELS ------------  */
+
+@media only screen and (max-width: 480px) {
+    .col { 
+        margin: 1% 0 1% 0%;
+    }
+    .socialicon {
+        margin: 72px 0px 0px 0px;
+    }
+    .wpcf7-form-control-wrap{
+       margin-left: 0px;
+      
+    }
+    .socialicon a {
+      margin: 8px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .span_2_of_2, .span_1_of_2 { width: 100%; }
+
+}
+
+
+
 </style>
 </section>
 <!--footer section end-->

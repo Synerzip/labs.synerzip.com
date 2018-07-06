@@ -544,10 +544,6 @@ if (is_page('life-at-synerzip'))
     .search-query:focus + button {
         z-index: 3;   
     }
-
-
-
-
 }
 
 </style>
