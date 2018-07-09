@@ -1,3 +1,4 @@
+
 <?php 
 get_header('labheader'); 
 global $post;
@@ -45,7 +46,6 @@ $terms = get_terms(array(
                          {
                               
                              $videoUrl = get_post_meta($Allstories[$i]->ID, 'vedio', true);// pulling videourl from custom field.
-
                               if (strpos($videoUrl, 'v=') !== false) {
                                  $fetch=explode("v=", $videoUrl);
                                  $videoid=$fetch[1];
@@ -69,7 +69,7 @@ $terms = get_terms(array(
                                   </div>
                                    
                                 <div class="story-text">
-                                     <a class="storyname" id="test1" href='#' data-group='<?php echo $story_type_id; ?>'><?php echo $story_type_name; ?></a>
+                                     <a class="storyname" data-groups ="<?php echo $story_type_id; ?>"><?php echo $story_type_name; ?></a>
                                      
                                       <?php 
                                         if(get_field('client_name',$Allstories[$i])=='')
@@ -159,7 +159,6 @@ $terms = get_terms(array(
     background: linear-gradient(90deg,#FFFF66 50%,#FFFF66 50%);
     font-size: 17px;
   }
-
   .btn-floating i {
       display: inline-block;
       width: inherit;
@@ -193,14 +192,12 @@ $terms = get_terms(array(
    	  text-transform: uppercase;
    	  font-weight: bold;
    }
-
    @media screen and (max-width: 800px){
 		.story-block .story-text p a {
 		    font-size: 14px;
 		    line-height: 19px;
 		}
     }
-
 </style>
 
 <script type="text/javascript">
@@ -213,7 +210,6 @@ $terms = get_terms(array(
                var text = $(this).text().toLowerCase();
                 if(text.indexOf(val) != -1){
                     $(this).show();
-
                      // Advanced filtering
                     var $storygrid = $('#storygrid');
                     $('#storygrid').shuffle({
@@ -224,20 +220,16 @@ $terms = get_terms(array(
                     // $("ul.success-stories-sort").find("[data-group=444]").parent('li').addClass('active');
                      var groupName1 = $('.storymenu').attr('data-group');
                     // reshuffle grid
-
                     $storygrid.shuffle('shuffle', Number(groupName1));
                     $(".success-stories-sort li").first().css("text-decoration", "none");
-
               
                 }
             });  
       });
-
       
        
   });
    
-
 $(function() {
    $(".button").click(function(){
      var id = $(this).attr('data-target');
@@ -251,9 +243,27 @@ $(function() {
          $(".modal .modal-body").html(postcontent);
          $(".modal").modal("show");
     });
+
+    $(".storyname").click(function(){
+       	   
+       	    var $storygrid = $('#storygrid');
+       	    $('#storygrid').shuffle({
+                group: 444,
+                speed: 1000,
+                easing: 'ease-out'
+            });
+
+	        var groupName = $(this).attr('data-groups');
+	        $("ul.success-stories-sort").find("[data-group=444]").parent('li').removeClass('active');
+	        $("ul.success-stories-sort").find("[data-group="+ groupName+"]").parent('li').addClass('active');
+	        // reshuffle grid
+            $storygrid.shuffle('shuffle', Number(groupName));
+            $(".success-stories-sort li").first().css("text-decoration", "none");
+          
+        }); 
+    
     
 });
-
 </script> 
        
        
@@ -261,4 +271,3 @@ $(function() {
  get_footer();
  ?>
  )
-
