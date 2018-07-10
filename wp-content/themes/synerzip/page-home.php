@@ -206,27 +206,40 @@ $terms = get_terms(array(
       $('#container-search').keyup(function(){
         var val = $(this).val().toLowerCase();
         $(".story-block").hide();
-           $('.story-block').each(function(){
+           $('.story-block').each(function(i){
                var text = $(this).text().toLowerCase();
                 if(text.indexOf(val) != -1){
                     $(this).show();
                      // Advanced filtering
+                   var storyname = $(this).find(".storyname").text();
+                   var groupNameId = $(this).find(".storyname").attr('data-groups');
+       	    
                     var $storygrid = $('#storygrid');
                     $('#storygrid').shuffle({
                         group: 444,
                         speed: 1000,
                         easing: 'ease-out'
                     });
-                    // $("ul.success-stories-sort").find("[data-group=444]").parent('li').addClass('active');
-                     var groupName1 = $('.storymenu').attr('data-group');
+                              
                     // reshuffle grid
-                    $storygrid.shuffle('shuffle', Number(groupName1));
+                    if(i > 2){
+                        $storygrid.shuffle('shuffle', Number('444',groupNameId));
+                    } else {
+                    	$storygrid.shuffle('shuffle', Number(groupNameId,'444'));
+                    }
+              
+                    if(val !== "") {
+                      	$("ul.success-stories-sort").hide();
+                    } else {
+                        $("ul.success-stories-sort").show();
+                    }
+
                     $(".success-stories-sort li").first().css("text-decoration", "none");
               
                 }
             });  
       });
-      
+                
        
   });
    
@@ -234,7 +247,6 @@ $(function() {
    $(".button").click(function(){
      var id = $(this).attr('data-target');
      var postcontent =$(this).parent().next().html();
-     console.log(postcontent);
      var postTitle = $(this).attr('postitle');
      var id = id.match(/[\d\.]+/g);
      var e = $('<div id='+id+' class="modal fade" role="dialog">');
@@ -245,7 +257,6 @@ $(function() {
     });
 
     $(".storyname").click(function(){
-       	   
        	    var $storygrid = $('#storygrid');
        	    $('#storygrid').shuffle({
                 group: 444,
@@ -261,7 +272,6 @@ $(function() {
             $(".success-stories-sort li").first().css("text-decoration", "none");
           
         }); 
-    
     
 });
 </script> 
