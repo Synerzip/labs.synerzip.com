@@ -220,20 +220,21 @@ $terms = get_terms(array(
                         speed: 1000,
                         easing: 'ease-out'
                     });
-                              
-                    // reshuffle grid
-                    if(i > 2){
-                        $storygrid.shuffle('shuffle', Number('444',groupNameId));
-                    } else {
-                    	$storygrid.shuffle('shuffle', Number(groupNameId,'444'));
+         
+                    $storygrid.shuffle('shuffle', function($el, shuffle) {
+                    // Only search elements in the current group
+                    if (shuffle.group !== 'all' && $.inArray(shuffle.group, $el.data('groups')) === -1) {
+                      console.log("print")
+                      return false;
                     }
-              
+                    var text1 = $.trim( $el.find('.story-block').text() ).toLowerCase();
+                    return text1.indexOf(val) !== -1;
+                    });
                     if(val !== "") {
                       	$("ul.success-stories-sort").hide();
                     } else {
                         $("ul.success-stories-sort").show();
                     }
-
                     $(".success-stories-sort li").first().css("text-decoration", "none");
               
                 }
@@ -270,8 +271,7 @@ $(function() {
 	        // reshuffle grid
             $storygrid.shuffle('shuffle', Number(groupName));
             $(".success-stories-sort li").first().css("text-decoration", "none");
-          
-        }); 
+       }); 
     
 });
 </script> 
